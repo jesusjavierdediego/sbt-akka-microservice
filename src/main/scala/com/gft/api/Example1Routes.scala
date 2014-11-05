@@ -10,7 +10,6 @@ import akka.pattern.ask
 import scala.util.{Failure, Success}
 import akka.util.Timeout
 import scala.concurrent.duration._
-import com.gft.ExampleService.ExampleMessage
 import com.gft.Services
 import scala.util.Success
 import scala.util.Failure
@@ -35,6 +34,9 @@ class Example1Routes(services: Services)(implicit ec: ExecutionContext, log: Log
 
   val route: Route =
     path("example1" / "test") {
+      get {
+        complete("Test on get!")
+      }
       post {
         entity(as[TestAPIObject]) { request =>
           complete(StatusCodes.OK, s"you send me ${request.thing}")
