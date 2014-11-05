@@ -1,4 +1,4 @@
-package com.sap1ens.api
+package com.gft.api
 
 import scala.concurrent.ExecutionContext
 import spray.util.LoggingContext
@@ -11,10 +11,10 @@ import scala.util.{Failure, Success}
 import akka.util.Timeout
 import scala.concurrent.duration._
 import com.gft.ExampleService.ExampleMessage
-import com.sap1ens.Services
+import com.gft.Services
 import scala.util.Success
 import scala.util.Failure
-import com.sap1ens.ExampleService.ExampleMessage
+import com.gft.ExampleService.ExampleMessage
 
 object Example1Routes {
   case class TestAPIObject(thing: String)
@@ -28,7 +28,7 @@ class Example1Routes(services: Services)(implicit ec: ExecutionContext, log: Log
 
   import Example1Routes._
   import Example1RoutesProtocol._
-  import com.sap1ens.api.ApiRoute._
+  import com.gft.api.ApiRoute._
   import ApiRouteProtocol._
 
   implicit val timeout = Timeout(10 seconds)

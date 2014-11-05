@@ -1,4 +1,4 @@
-package com.sap1ens
+package com.gft
 
 import com.gft.api.Api
 

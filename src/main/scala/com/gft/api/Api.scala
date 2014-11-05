@@ -1,4 +1,4 @@
-package com.sap1ens.api
+package com.gft.api
 
 import spray.routing._
 import akka.actor.{ActorRef, ActorLogging, Props}
@@ -9,7 +9,7 @@ import spray.json.DefaultJsonProtocol
 import spray.util.LoggingContext
 import spray.httpx.SprayJsonSupport
 import com.gft.utils.ConfigHolder
-import com.sap1ens.{Services, Core, CoreActors}
+import com.gft.{Services, Core, CoreActors}
 import spray.http.HttpHeaders.{`Access-Control-Allow-Origin`, `Access-Control-Allow-Credentials`, `Access-Control-Allow-Headers`, `Access-Control-Allow-Methods`}
 import spray.http.HttpMethods._
 import spray.http.{StatusCodes, HttpOrigin, SomeOrigins}
@@ -69,8 +69,8 @@ object ApiRoute {
 
 abstract class ApiRoute(services: Services = Services.empty)(implicit log: LoggingContext) extends Directives with SprayJsonSupport {
 
-  import com.sap1ens.api.ApiRoute.{ApiMessages, Message}
-  import com.sap1ens.api.ApiRoute.ApiRouteProtocol._
+  import com.gft.api.ApiRoute.{ApiMessages, Message}
+  import com.gft.api.ApiRoute.ApiRouteProtocol._
 
   def withService(id: String)(action: ActorRef => Route) = {
     services.get(id.toLowerCase) match {

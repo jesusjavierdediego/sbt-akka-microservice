@@ -33,7 +33,7 @@ libraryDependencies ++= Seq(
 
 lazy val logback = "ch.qos.logback" % "logback-classic" % "1.1.2"
 
-val sap1ensMergeStrategy: String => MergeStrategy = {
+val gftMergeStrategy: String => MergeStrategy = {
   case x if Assembly.isConfigFile(x) =>
     MergeStrategy.concat
   case PathList(ps @ _*) if Assembly.isReadme(ps.last) || Assembly.isLicenseFile(ps.last) =>
@@ -59,6 +59,6 @@ val sap1ensMergeStrategy: String => MergeStrategy = {
   case _ => MergeStrategy.deduplicate
 }
 
-mergeStrategy in assembly := sap1ensMergeStrategy
+mergeStrategy in assembly := gftMergeStrategy
 
 test in assembly := {}
