@@ -1,4 +1,4 @@
-package com.gft.utils
+package com.hppoc.utils
 
 //http://typesafehub.github.io/config/latest/api/com/typesafe/config/ConfigFactory.html
 import com.typesafe.config.ConfigFactory

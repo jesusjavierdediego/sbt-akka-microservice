@@ -1,4 +1,4 @@
-package com.gft.api
+package com.hppoc.api
 
 import scala.concurrent.ExecutionContext
 import spray.util.LoggingContext
@@ -10,10 +10,10 @@ import akka.pattern.ask
 import scala.util.{Failure, Success}
 import akka.util.Timeout
 import scala.concurrent.duration._
-import com.gft.Services
+import com.hppoc.Services
 import scala.util.Success
 import scala.util.Failure
-import com.gft.ExampleService.ExampleMessage
+import com.hppoc.ExampleService.ExampleMessage
 
 object Example1Routes {
   case class TestAPIObject(thing: String)
@@ -27,7 +27,7 @@ class Example1Routes(services: Services)(implicit ec: ExecutionContext, log: Log
 
   import Example1Routes._
   import Example1RoutesProtocol._
-  import com.gft.api.ApiRoute._
+  import com.hppoc.api.ApiRoute._
   import ApiRouteProtocol._
 
   implicit val timeout = Timeout(10 seconds)

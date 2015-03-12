@@ -1,4 +1,4 @@
-package com.gft
+package com.hppoc
 
 import akka.actor.{ActorLogging, Actor}
 import akka.camel.{Consumer, Oneway, Producer}

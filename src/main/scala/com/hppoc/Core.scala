@@ -1,7 +1,7 @@
-package com.gft
+package com.hppoc
 
 import akka.actor.ActorSystem
-import com.gft.utils.ConfigHolder
+import com.hppoc.utils.ConfigHolder
 import akka.camel.CamelExtension
 import org.apache.activemq.camel.component.ActiveMQComponent
 

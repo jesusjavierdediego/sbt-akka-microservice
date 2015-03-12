@@ -1,6 +1,6 @@
-package com.gft
+package com.hppoc
 
-import com.gft.api.Api
+import com.hppoc.api.Api
 
 
 object MicroServiceSystem extends App with BootedCore with ActiveMQSupport with CoreActors with Api
